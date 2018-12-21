@@ -1,1 +1,74 @@
+Prolog Assignment
+A. Implement a rule called "uncle" that finds every uncle
+   in a simple set of family relationships.  You can assume 
+   that the rule is called in the presence of some set of facts,
+   each of which is of one of the following two forms:
+
+      parent(X,Y)
+      male(Z)
+
+   "parent(X,Y)" means that X is a parent of Y.
+   "male(Z)" means that Z is a male.
+   For example, if the following facts are present:
+
+      parent(john, fred).
+      parent(john, terry).
+      parent(terry, madge).
+      parent(fred, luther).
+      male(john).
+      male(fred).
+      male(luther).
+
+   Then the query:  uncle(U,N).
+   should result in Prolog's response: U=fred, N=madge
+   (because fred is madge's uncle).
+   Your rule should find ALL uncles.
+   Of course, you will need to test your rule in more
+   complex scenarios to make sure it will work for other
+   sets of parent/male facts.
+   (note - you should only submit your "uncle" rule.
+    you don't need to submit any "parent" or "male" facts.
+    We will use our own test cases when grading your "uncle" rule).
+
+B. Implement "cappedSum" from Homework #2 as a Prolog rule.
+   For example, the query:  cappedSum(7, [6,4,9,2,8], S).
+   should result in Prolog's response:  S = 26.
+   You only need to handle lists that contain integers.
+
+C. Implement "reverseShuffle" from Homework #2 as a Prolog rule.
+   For example, the query:  reverseShuffle([3,8,2,6], [7,1,5,9], R).
+   should result in Prolog's response:  R = [3,9,8,5,2,1,6,7]
+
+D. Implement a rule "pingpong" that solves the following
+   digit substitution puzzle:
+
+                 PIN
+               + ING
+               -----
+              = GNOP
+
+   Each of the 5 letters (P,I,N,G,O) stands for a different digit.
+   The aim is to find a substitution of digits for the letters
+   such that the above stated sum is arithmetically correct.
+   Your program should find all answers.
+
+   It should be possible to query your solution in this manner:
+
+      ?- pingpong(P,I,N,G,O).
+
+   Your solution should then produce all of the combinations of
+   possible assignments of single digits to each letter, such 
+   that it satisfies the particular addition problem above.
+   Don't get confused between the letter "O" and the number "0" (zero).
+
+   Make sure you never let P=I, or I=G, etc... all of the distinct
+   letters P,I,N,G,O have to stand for distinct digits.
+
+   Use generate-and-test!
+
+-------------------------------------------------------------------------
+
+Submit your solutions in a single file.
+Clearly separate your solutions with a commented line of hyphens, as for homework #2.
+
 
